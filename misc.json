@@ -1,4 +1,5 @@
 {
+    "//startup_animation": "Which boot animation plays. On the next line, type vertigo for Vertigo's head or azurinth for Azurinth's head, keeping the quotes around it.",
     "startup_animation": "vertigo",
     "main_animation": "normal",
     "edit_mode_cycle_animation": true,
