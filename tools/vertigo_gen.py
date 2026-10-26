@@ -2,12 +2,12 @@
 
 Needs Pillow (pip install pillow).
 
-    python tools/startup_gen.py preview startup-preview.gif
-    python tools/startup_gen.py video startup.mp4        (also needs imageio-ffmpeg)
-    python tools/startup_gen.py frames expressions/startup
+    python tools/vertigo_gen.py preview vertigo-preview.gif
+    python tools/vertigo_gen.py video vertigo.mp4        (also needs imageio-ffmpeg)
+    python tools/vertigo_gen.py frames expressions/vertigo
 
-"frames" writes the unique PNGs as "startup (N).png" and prints the frame
-sequence to paste into the "startup" expression in animation.json.
+"frames" writes the unique PNGs as "vertigo (N).png" and prints the frame
+sequence to paste into the "vertigo" expression in animation.json.
 """
 import json
 import math
@@ -313,7 +313,7 @@ def video(out):
 def write_frames(out_dir):
     frames, seq = build()
     for i, f in enumerate(frames, 1):
-        f.save(f"{out_dir}/startup ({i}).png")
+        f.save(f"{out_dir}/vertigo ({i}).png")
     print(len(frames))
     print(json.dumps(seq))
 
