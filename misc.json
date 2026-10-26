@@ -7,7 +7,7 @@
         "//comment": "trigger_mode is 'apds9960' (proximity sensor on I2C) or 'gpio' (simple on/off sensor). threshold: 1-255, lower = boops from farther away. longHoldDuration: hold this many ms to switch to the next face (0 disables).",
         "trigger_mode": "apds9960",
         "int_gpio": 48,
-        "threshold": 60,
+        "threshold": 200,
         "enabled": true,
         "boopTriggerDuration": 50,
         "longHoldDuration": 2000,
