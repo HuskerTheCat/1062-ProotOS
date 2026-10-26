@@ -56,8 +56,8 @@ function onPreflight()
         expressions.Next()
     end
 
-    if configloader.Get().startup_animation ~= nil or configloader.Get().starting_animation then
-        expressions.StackExpression("startup")
+    if configloader.Get().startup_animation ~= nil then
+        expressions.StackExpression(configloader.Get().startup_animation)
     end
 
     input.Start() 
