@@ -1,12 +1,12 @@
-"""Generate the sleepy skull startup animation from tools/startup_skull.png (64x32 per panel).
+"""Generate the Azurinth startup animation (sleepy skull) from tools/azurinth.png (64x32 per panel).
 
 Needs Pillow (pip install pillow).
 
-    python tools/startup_skull_gen.py preview startup-skull-preview.gif
-    python tools/startup_skull_gen.py frames expressions/startup_skull
+    python tools/azurinth_gen.py preview azurinth-preview.gif
+    python tools/azurinth_gen.py frames expressions/azurinth
 
-"frames" writes the unique PNGs as "startup_skull (N).png" and prints the frame
-sequence to paste into the "startup_skull" expression in animation.json.
+"frames" writes the unique PNGs as "azurinth (N).png" and prints the frame
+sequence to paste into the "azurinth" expression in animation.json.
 """
 import json
 import math
@@ -16,7 +16,7 @@ from PIL import Image
 
 W, H = 64, 32
 FRAME_MS = 40
-SOURCE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "startup_skull.png")
+SOURCE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "azurinth.png")
 OFFSET_X = (W - 32) // 2
 EYE_GLOW = (230, 210, 255)
 EYES = [(x, y) for y in (22, 23) for x in (10, 11, 12, 13, 18, 19, 20, 21)]
@@ -131,7 +131,7 @@ def write_frames(out_dir):
     frames, seq = build()
     os.makedirs(out_dir, exist_ok=True)
     for i, f in enumerate(frames, 1):
-        f.save(f"{out_dir}/startup_skull ({i}).png")
+        f.save(f"{out_dir}/azurinth ({i}).png")
     print(len(frames))
     print(json.dumps(seq))
 
